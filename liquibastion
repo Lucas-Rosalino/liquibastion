@@ -1,0 +1,21 @@
+# ./liquibastion
+#!/bin/bash
+
+export LIQUIBASTION_ROOT_PATH=/usr/local/bin/liquibastion-files
+source $LIQUIBASTION_ROOT_PATH/lib/env/env.sh
+source $LIQUIBASTION_ROOT_PATH/lib/update/update.sh
+
+case $1 in
+    env)
+        shift 
+        env $@
+        ;;
+    update)
+        shift 
+        update_command $@
+        ;;
+    *)
+        printf "oporra\n"
+        exit 1
+        ;;
+esac
