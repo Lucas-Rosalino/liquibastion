@@ -2,7 +2,7 @@
 #!/bin/bash
 
 script_pwd=$(pwd)
-if [ -d /usr/local/bin/liquibastion ]; then
+if [ -d /usr/local/bin/liquibastion-files ]; then
     echo "liquibastion is already installed on this machine"
 else
     mkdir -p /usr/local/bin/liquibastion-files && cd /usr/local/bin/liquibastion-files
